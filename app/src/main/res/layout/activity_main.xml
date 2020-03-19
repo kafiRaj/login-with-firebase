@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tollBarId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Login App"
+            app:titleTextColor="#ffffff"
+            />
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/colorPrimary"
+            app:tabMode="scrollable"
+            />
+
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+    android:id="@+id/viwPagerId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/appbarId"
+    >
+
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+        app:menu="@menu/nav_menu"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        />
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
